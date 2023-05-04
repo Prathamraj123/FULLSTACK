@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <title>ORDERING LIST</title>
+</html>
+<html>
+    <body>
+
+        <center>
+        <h2 >
+            Choose the City name
+        </h2>
+        <select onchange="order(this.value)" class="city">
+            <option  class="c1" value="chennai.html">Chennai</option>
+            <option class="c2" value="Coimbatore.html">Coimbatore and Madurai</option>
+            <option class="c3" value="SA.html">Salem</option>
+            <option class="c4" value="Tiruchirappall.html">Tiruchirappalli</option>
+            <option class="c5" value="Thoothukud.html">Thoothukudi</option>
+            <option class="c6" value="others">Others</option>
+        </select>
+       
+    </center>
+
+    </body>
+    <script>
+        function order(select)
+        {
+            window.location=select;
+        }
+    </script>
+    </html>

@@ -1,0 +1,47 @@
+<!--
+3. In the Truth Magazine, Ramakrishnan and his colleagues are engaged in
+simplifying English into a more regular language called Speak Simplified. 
+The truth magazine it is described that the word can take a variety of 
+prefixes to eliminate the need for the massive number of words we have 
+in English. For example: 
+Any word – could be negatived by adding the affix un-, or could be 
+strengthened by the affix plus-, or, for still greater emphasis, doubleplus. 
+Thus, for example, uncold meant “warm”, while pluscold and 
+doublepluscold meant, respectively, “very cold” and “superlatively 
+cold”.
+Implement a JavaScript file (SpeakSimplified.js) with three functions 
+– exclusion, strengthen and emphasize. The system must take the string 
+as input as, prepend the prefixes "un", "plus", and "double" to that string, 
+respectively, and return the new string. You can test your implementation 
+by loading SpeakSimplified.html into the browser
+-->
+
+<html>
+<head>
+    <title>Truth Magazine</title>
+    <script src="TruthMagazine.js"></script>
+</head>
+
+<center>
+<h1><U>Truth Magazine</U></h1>
+<br><br>
+<div style="width:700px; border: solid brown 3px;"> 
+    <br>
+<label>Enter a word and then select the option.</label>
+<br><br>
+<input type="text" id="inputs" placeholder="any word of your choice"  style="width: 250px; height:40px">
+
+<br><br><br>
+ <button style="margin: 15px; width:130px; height:25px " onclick="negate()">Negate</button>
+ <button style="margin: 15px; width:130px; height:25px"  onclick="strengthen()">Strengthen</button>
+ <button style="margin: 15px; width:130px; height:25px"  onclick="doubleplus()"">Greater Emphasis</button>
+<hr>
+<h2><u>Output</u></h2>
+<br>
+<input type="text" id="output" placeholder="output would be shown here" style="width: 250px; height:40px;">
+<br><br><br>
+
+</div>
+</center>
+
+</html>

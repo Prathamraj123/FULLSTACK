@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>PIZZA</title>
+</head>
+<body>
+    <center>
+        <h2>
+            PIZZA BILL CALCULATOR
+        </h2>
+        <h4>PLAIN THIN-CRUST PIZZAS:</h4>
+        <input type="radio" name="r1"  >SMALL
+        <br>
+        <input type="radio" name="r1"  >MEDIUM
+        <br>
+        <input type="radio" name="r1" >LARGE
+        <br>
+        <br>
+        <br>
+
+        <input type="checkbox" id="deeppan">DEEP PAN
+        <br>
+        <h3>EXTRA TOPPINGS</h3>
+        <input type="radio" name="r2" >OLIVES
+        <br>
+        <input type="radio" name="r2" >FINGERNAIL
+        <br>
+        <input type="radio" name="r2" >SPICY BEEF
+        <br>
+        <input type="radio" name="r2" >MUSHROOM
+        <br>
+        <br>
+        <br>
+        <b>
+        <input type="checkbox" id="home">HOMEDELIVERY
+        </b>
+        <br>
+        <br>
+        <br>
+        TOTAL BILL IS Rs.
+        <input type="text" id="output" placeholder="BILL IS" ><button type="button" onclick="show()">CALCULATE</button>
+
+    </center>
+    <script>
+       
+    function show()
+    {
+        var bill=0;
+        var item=document.getElementsByName('r1');
+        if(item[0].checked)
+        bill=bill+99;
+        else if(item[1].checked)
+        bill=bill+199;
+        else if(item[2].checked)
+        bill=bill+399;
+        else
+        {
+            alert("PLEASE SELECT ANY ONE OPTION");
+            return;
+        }
+        if(document.getElementById('deeppan').checked)
+        bill+=20;
+        var item1=document.getElementsByName('r2');
+        if(item1[0].checked)
+        bill+=15;
+        else if(item1[1].checked)
+        bill+=10;
+        else if(item1[2].checked)
+        bill+=30;
+        else if(item1[3].checked)
+        bill+=20;
+        else
+        {
+            alert("PLEASE SELECT THE TOPPINGS");
+            return ;
+        }
+        if(document.getElementById('home').checked)
+        bill+=25;
+
+
+        document.getElementById('output').value=bill;
+
+        
+
+
+
+        
+    }
+    </script>
+</body>
+</html>

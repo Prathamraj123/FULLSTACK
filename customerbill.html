@@ -1,0 +1,131 @@
+
+<html>
+    <head>
+        <title>CUSTOMER BILL</title>
+    </head>
+    <style>
+        table,th,td {border: 1px solid black;
+
+        }
+    </style>
+    <body>
+        <center>
+        <h2>Enter the consumption units</h2>
+        <input id="in" type="number" placeholder="UNITS CONSUMED"/>
+        <button type="button" onclick="cal()" value="Calculate">Calculate</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Displaying bill</h2>
+        <table >
+            <tr>
+                <td>Description</td>
+                <td> Amount</td>
+            </tr>
+            <tr >
+                <td style=color:blue; >Consumed Units:</td>
+                <td id="Consumed" style=color:red;> </td>
+            </tr>
+            <tr>
+                <td style=color:blue;>Total Current Charges Rs. </td>
+                <td id="current" style=color:red;> </td>
+            </tr>
+            <tr>
+                <td style=color:blue;>Current Charges R</td>
+                <td id="Current" style=color:red;> </td>
+            </tr>
+            <tr>
+                <td style=color:blue;>Fixed Cost Rs.(+)</td>
+                <td id="Fixedcost" style=color:red;> </td>
+            </tr>
+            <tr>
+                <td style=color:blue;>Subsidy Fixed Cost Rs.(-)</td>
+                <td id="subsidy" style=color:red;> </td>
+            </tr>
+            <tr>
+                <td style=color:blue;>New Subsidy Rs.(-)</td>
+                <td id="newsubsidy" style=color:red;> </td>
+            </tr>
+            <tr>
+                <td style=color:blue;>Net Amount Rs.</td>
+                <td id="total"style=color:red;> </td>
+            </tr>
+            
+        </table>
+    </body>
+    <script>
+        function cal()
+        {
+            let bill;
+            if(document.getElementById("in").value>=0 && document.getElementById("in").value<=100)
+            {
+                bill=0;
+            alert("Yout bill is"+bill);
+            }
+            if(document.getElementById("in").value>=101 && document.getElementById("in").value<=200)
+            {
+                
+                if(document.getElementById("in").value>150)
+                {
+                bill=100+(document.getElementById("in").value-150)*3.75;
+                alert("Yout bill is "+bill);
+                }
+                else
+                alert("Yout bill is "+100);
+            }
+            if(document.getElementById("in").value>=201 && document.getElementById("in").value<=400)
+            {
+                
+                if(document.getElementById("in").value>250)
+                {
+                bill=250+(document.getElementById("in").value-250)*4;
+                alert("Yout bill is "+bill);
+                }
+                else
+                alert("Yout bill is "+250);
+            }
+            if(document.getElementById("in").value>=401 && document.getElementById("in").value<=600)
+            {
+                
+                if(document.getElementById("in").value>450)
+                {
+                bill=300+(document.getElementById("in").value-450)*4.25;
+                alert("Yout bill is "+bill);
+                }
+                else
+                alert("Yout bill is "+300);
+            }
+            if(document.getElementById("in").value>600 )
+            {
+                
+                if(document.getElementById("in").value>600)
+                {
+                bill=400+(document.getElementById("in").value-600)*5;
+                alert("Yout bill is "+bill);
+                }
+                else
+                alert("Yout bill is "+400);
+            }
+            document.getElementById("Consumed").innerHTML=document.getElementById("in").value;
+            var a="",b="",c="",d="",e="",f="";
+            var sum;
+            a=document.getElementById("current").innerHTML=bill;
+            a=bill;
+            b=document.getElementById("Current").innerHTML=bill;
+            b=bill;
+            
+            c=document.getElementById("Fixedcost").innerHTML=50;
+            c=50;
+           d= document.getElementById("subsidy").innerHTML=0;
+            d=0;
+            e=document.getElementById("newsubsidy").innerHTML=250;
+            e=250;
+           sum=parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d)-parseInt(e);
+           document.getElementById("total").innerHTML=sum;
+
+
+
+        }
+    </script>
+</html>
